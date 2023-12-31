@@ -1,0 +1,520 @@
+{
+  "last_node_id": 17,
+  "last_link_id": 14,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "SaveImageExtended",
+      "pos": [
+        1397,
+        1365
+      ],
+      "size": {
+        "0": 315,
+        "1": 598
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "name": "positive_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "positive_text_opt"
+          }
+        },
+        {
+          "name": "negative_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "negative_text_opt"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImageExtended"
+      },
+      "widgets_values": [
+        "dance",
+        "steps, cfg",
+        "dancesegs",
+        "sampler_name, scheduler",
+        "underscore",
+        "basic, prompt",
+        "disabled",
+        "",
+        "enabled",
+        3,
+        "last",
+        "disabled",
+        "enabled",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 9,
+      "type": "SaveImageExtended",
+      "pos": [
+        1874,
+        645
+      ],
+      "size": {
+        "0": 315,
+        "1": 598
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "name": "positive_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "positive_text_opt"
+          }
+        },
+        {
+          "name": "negative_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "negative_text_opt"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImageExtended"
+      },
+      "widgets_values": [
+        "dance",
+        "steps, cfg",
+        "dancelines",
+        "sampler_name, scheduler",
+        "underscore",
+        "basic, prompt",
+        "disabled",
+        "",
+        "enabled",
+        3,
+        "last",
+        "disabled",
+        "enabled",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 7,
+      "type": "SaveImageExtended",
+      "pos": [
+        1882,
+        1304
+      ],
+      "size": {
+        "0": 315,
+        "1": 598
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "name": "positive_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "positive_text_opt"
+          }
+        },
+        {
+          "name": "negative_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "negative_text_opt"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImageExtended"
+      },
+      "widgets_values": [
+        "pose",
+        "steps, cfg",
+        "dancepose",
+        "sampler_name, scheduler",
+        "underscore",
+        "basic, prompt",
+        "disabled",
+        "",
+        "enabled",
+        3,
+        "last",
+        "disabled",
+        "enabled",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 8,
+      "type": "HEDPreprocessor",
+      "pos": [
+        937,
+        977
+      ],
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "HEDPreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        512
+      ]
+    },
+    {
+      "id": 1,
+      "type": "OpenposePreprocessor",
+      "pos": [
+        934,
+        1134
+      ],
+      "size": {
+        "0": 315,
+        "1": 130
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 3,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OpenposePreprocessor"
+      },
+      "widgets_values": [
+        "enable",
+        "enable",
+        "enable",
+        512
+      ]
+    },
+    {
+      "id": 16,
+      "type": "SAMPreprocessor",
+      "pos": [
+        936,
+        1340
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMPreprocessor"
+      },
+      "widgets_values": [
+        512
+      ]
+    },
+    {
+      "id": 13,
+      "type": "MiDaS-DepthMapPreprocessor",
+      "pos": [
+        939,
+        798
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiDaS-DepthMapPreprocessor"
+      },
+      "widgets_values": [
+        6.283185307179586,
+        0.1,
+        512
+      ]
+    },
+    {
+      "id": 11,
+      "type": "SaveImageExtended",
+      "pos": [
+        1373,
+        348
+      ],
+      "size": {
+        "0": 320.6307067871094,
+        "1": 598.3886108398438
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "name": "positive_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "positive_text_opt"
+          }
+        },
+        {
+          "name": "negative_text_opt",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "negative_text_opt"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImageExtended"
+      },
+      "widgets_values": [
+        "dance",
+        "steps, cfg",
+        "dancedepth",
+        "sampler_name, scheduler",
+        "underscore",
+        "basic, prompt",
+        "disabled",
+        "",
+        "enabled",
+        3,
+        "last",
+        "disabled",
+        "enabled",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LoadImagesFromDirectory",
+      "pos": [
+        475,
+        876
+      ],
+      "size": {
+        "0": 315,
+        "1": 146
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3,
+            5,
+            11,
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImagesFromDirectory"
+      },
+      "widgets_values": [
+        "G:\\AI\\Resources\\OpenPose\\Pose Input",
+        128,
+        0
+      ]
+    }
+  ],
+  "links": [
+    [
+      3,
+      4,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      4,
+      1,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      4,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      4,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      13,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      4,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
